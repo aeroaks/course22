@@ -1,0 +1,25 @@
+[project]
+authors = [{name = "akverma", email = "akshay.verma@asml.com"}]
+name = "fastai_course22"
+requires-python = ">= 3.11"
+version = "0.1.0"
+dependencies = ["duckduckgo-search>=2025.4.1,<2026"]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.pypi-dependencies]
+fastai_course22 = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = ">=3.12.9,<3.13"
+fastai = ">=2.7.19,<3"
+ipykernel = ">=6.29.5,<7"
+pip = ">=25.0.1,<26"
